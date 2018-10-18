@@ -1,0 +1,108 @@
+/* set defaults */
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container {
+  width: calc(100% - 30px);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* outer wrapper */
+#editor {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* toolbar */
+#toolbar {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  line-height: 1;
+  z-index: 1000;
+}
+#toolbar .toolbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0.3;
+  transition: opacity 150ms linear;
+}
+#toolbar:hover .toolbar-row {
+  opacity: 1;
+}
+
+/* toolbar buttons */
+#toolbar .btn {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 8px;
+  padding: 5px;
+  margin: 2px;
+  height: 34px;
+  min-width: 34px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  color: #666;
+  transition: border 150ms linear, box-shadow 250ms linear;
+}
+#toolbar .btn:hover {
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 10px 10px -6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.btn .btn-tooltip {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: auto;
+  bottom: 100%;
+  padding: 5px;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 10px;
+  line-height: 1;
+  color: #ccc;
+  margin-bottom: 5px;
+  transition: opacity 400ms linear;
+  transition-delay: 0s;
+}
+.btn:hover .btn-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 700ms;
+}
+
+/* toolbar separator */
+#toolbar .toolbar-sep {
+  display: block;
+  height: 34px;
+  width: 1px;
+  background-color: rgba(0,0,0,0.05);
+  margin: 2px 4px;
+}
