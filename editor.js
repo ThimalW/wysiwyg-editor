@@ -1,4 +1,3 @@
-// toolbar button tooltips
 var toolbarButtons = document.getElementsByClassName("btn");
 var makeTooltip = function(tooltipText) {
   var tooltip = document.createElement("div");
