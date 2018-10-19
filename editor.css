@@ -52,7 +52,6 @@ html {
 /* toolbar buttons */
 #toolbar .btn {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(0,0,0,0);
@@ -79,8 +78,7 @@ html {
   visibility: hidden;
   pointer-events: none;
   position: absolute;
-  top: auto;
-  bottom: 100%;
+  top: -8px;
   padding: 5px 10px;
   border-radius: 3px;
   background-color: rgba(0,0,0,0.3);
