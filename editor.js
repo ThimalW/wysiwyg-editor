@@ -18,4 +18,18 @@ for (let i = 0; i < toolbarButtons.length; i++) {
   if (tooltipText) {
     toolbarButtons[i].appendChild(makeTooltip(toolbarButtons[i].getAttribute("tooltip")));
   }
+
+  // button commands
+  toolbarButtons[i].addEventListener("click", function(e) {
+    const command = this.getAttribute("data-command");
+    var commandValue = null;
+
+    if (this.hasAttribute("data-command-value")) {
+      commandValue = this.getAttribute("data-command-value");
+    }
+
+    document.execCommand(command, false, commandValue);
+
+    console.log("Command:", command);
+  });
 }

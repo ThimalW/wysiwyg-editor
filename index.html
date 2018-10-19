@@ -10,20 +10,25 @@
 </head>
 <body>
   <div id="editor">
+    <div class="textarea-wrapper">
+      <div class="container">
+        <div id="textarea" contenteditable placeholder="Type here..."></div>
+      </div>
+    </div>
     <div id="toolbar">
       <div class="container">
         <div class="toolbar-row">
-          <button class="btn toolbar-command" data-command="heading" data-command-value="h1" tooltip="Heading"><i class="fas fa-heading"></i></button>
-          <button class="btn toolbar-command" data-command="h2" tooltip="Paragraph"><i class="fas fa-paragraph"></i></button>
+          <button class="btn toolbar-command" data-command="formatBlock" data-command-value="h1" tooltip="Heading"><i class="fas fa-heading"></i></button>
+          <button class="btn toolbar-command" data-command="formatBlock" data-command-value="p" tooltip="Paragraph"><i class="fas fa-paragraph"></i></button>
           <div class="toolbar-sep"></div>
-          <button class="btn toolbar-command" data-command="h2" tooltip="Bold"><i class="fa fa-bold"></i></button>
-          <button class="btn toolbar-command" data-command="h2" tooltip="Italic"><i class="fas fa-italic"></i></button>
-          <button class="btn toolbar-command" data-command="h2" tooltip="Underline"><i class="fas fa-underline"></i></button>
+          <button class="btn toolbar-command" data-command="bold" tooltip="Bold"><i class="fa fa-bold"></i></button>
+          <button class="btn toolbar-command" data-command="italic" tooltip="Italic"><i class="fas fa-italic"></i></button>
+          <button class="btn toolbar-command" data-command="underline" tooltip="Underline"><i class="fas fa-underline"></i></button>
           <div class="toolbar-sep"></div>
-          <button class="btn toolbar-command" data-command="h2" tooltip="Align Left"><i class="fas fa-align-left"></i></button>
-          <button class="btn toolbar-command" data-command="h2" tooltip="Align Center"><i class="fas fa-align-center"></i></button>
-          <button class="btn toolbar-command" data-command="h2" tooltip="Align Right"><i class="fas fa-align-right"></i></button>
-          <button class="btn toolbar-command" data-command="h2" tooltip="Align Justify"><i class="fas fa-align-justify"></i></button>
+          <button class="btn toolbar-command" data-command="justifyLeft" tooltip="Align Left"><i class="fas fa-align-left"></i></button>
+          <button class="btn toolbar-command" data-command="justifyCenter" tooltip="Align Center"><i class="fas fa-align-center"></i></button>
+          <button class="btn toolbar-command" data-command="justifyRight" tooltip="Align Right"><i class="fas fa-align-right"></i></button>
+          <button class="btn toolbar-command" data-command="justifyFull" tooltip="Align Justify"><i class="fas fa-align-justify"></i></button>
         </div>
       </div>
     </div>
