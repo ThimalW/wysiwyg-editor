@@ -1,3 +1,6 @@
+// set default paragraph separator
+document.execCommand("defaultParagraphSeparator", false, "p");
+
 // get toolbar buttons
 var toolbarButtons = document.getElementsByClassName("btn");
 
@@ -29,7 +32,5 @@ for (let i = 0; i < toolbarButtons.length; i++) {
     }
 
     document.execCommand(command, false, commandValue);
-
-    console.log("Command:", command);
   });
 }
